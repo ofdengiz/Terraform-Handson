@@ -32,13 +32,13 @@ resource "aws_acm_certificate_validation" "cervalidate" {
 }
 
 resource "aws_route53_record" "kittens" {
-  zone_id = aws_route53_zone.primary.zone_id
-  name    = "example.com"
+  zone_id = data.aws_route53_zone.route53zone.zone_id
+  name    = var.record_name
   type    = "A"
 
   alias {
-    name                   = aws_elb.main.dns_name
-    zone_id                = aws_elb.main.zone_id
-    evaluate_target_health = true
+    name                   = aws_cloudfront_distribution.s3_distribution.domain_name
+    zone_id                = aws_cloudfront_distribution.s3_distribution.hosted_zone_id
+    evaluate_target_health = false
   }
 }

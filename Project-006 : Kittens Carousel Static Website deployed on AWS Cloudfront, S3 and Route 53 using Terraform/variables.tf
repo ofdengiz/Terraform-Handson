@@ -7,6 +7,7 @@ variable "domainame" {
 }
 
 
-variable "zoneID" {
-  default = "Z07169272WTG4LKAYPROJ"
+variable "record_name" {
+  default     = "kittens"
+  description = "sub domain name"
 }
