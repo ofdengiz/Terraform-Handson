@@ -1,6 +1,6 @@
-# Terraform Hands-on Labs
+# terraform-aws-patterns
 
-Hands-on Terraform labs covering core AWS provisioning patterns. Each folder is a self-contained Terraform workspace that can be applied independently.
+Reference Terraform patterns for core AWS provisioning. Each folder is a self-contained Terraform workspace that can be applied independently.
 
 **Stack:** Terraform · AWS · HCL
 
