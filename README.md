@@ -15,7 +15,7 @@ Static website fronted by CloudFront with HTTPS via ACM and a Route 53 alias rec
 - Route 53 `A` alias record pointing the subdomain at the distribution
 - `for_each` over `domain_validation_options` to automate cert validation
 
-> **Note:** this lab uses a public S3 bucket + wildcard `Principal: "*"` policy — that was the tutorial pattern in 2023. My current pattern (see [omerdengiz.com](https://omerdengiz.com)) uses **Origin Access Control (OAC)** with a private bucket and a CloudFront service-principal condition.
+> **Note:** this example uses a public S3 bucket + wildcard `Principal: "*"` policy — the common pattern circa 2023. My current pattern (see [omerdengiz.com](https://omerdengiz.com)) uses **Origin Access Control (OAC)** with a private bucket and a CloudFront service-principal condition.
 
 ## For my current Terraform work
 
